@@ -17,4 +17,4 @@ cameratoolbar('Show') % show camera toolbar
 cameratoolbar('SetCoordSys', 'y')
 camup(ground_plane_normal);
 campos(C(:, 33));
-camva(5);
+camva(7);

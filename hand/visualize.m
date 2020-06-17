@@ -1,7 +1,7 @@
 dataset_path = '/home/zhixuan/data1/HUMBI/HUMBI_uploaded/Hand_81_140';
 subject = 82;
-frame = 73;
-side = 'left'; % 'left' or 'right'
+frame = 1;
+side = 'right'; % 'left' or 'right'
 showAxis = false; % whether show 3D axis when plotting
 showKpsIdx = false; % whether plot indices of keypoints
 vis3D = true; % if true, visualize 3D mesh and kps
