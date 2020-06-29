@@ -22,9 +22,9 @@ reconstruction_dir = sprintf(recon_dir_format, subject, frame);
 if useFitParams
     [~, ~, fitted_params] = read_face_recon(reconstruction_dir);
     [scale, R, t, shape_coefficients, expression_coefficients] = parse_fitted_params(fitted_params);
-    vertices_ = reconstruct_face_fitted(meanface_3DMM, shape_basis_3DMM, expression_basis_3DMM, ...
+    vertices = reconstruct_face_fitted(meanface_3DMM, shape_basis_3DMM, expression_basis_3DMM, ...
         shape_coefficients, expression_coefficients, scale, R, t);
-    kps_ = reconstruct_face_fitted(meanface_v, shape_basis_66, expression_basis_66, ...
+    kps = reconstruct_face_fitted(meanface_v, shape_basis_66, expression_basis_66, ...
         shape_coefficients, expression_coefficients, scale, R, t);
 else
     [vertices, kps, ~] = read_face_recon(reconstruction_dir);
@@ -46,8 +46,8 @@ else  % visualize reprojections of 3D mesh and kps on cropped image
         % compute reprojections
         cam = bboxes(i, 1);
         bbox = bboxes(i, 2:end); % 1 x 4, [xmin, xmax, ymin, ymax]
-        scale_x = (bbox(2) - bbox(1) + 1) / img_size(1); % since cropped image width is 200
-        scale_y = (bbox(4) - bbox(3) + 1) / img_size(2); % since cropped image height is 250
+        scale_x = (bbox(2) - bbox(1) + 1) / img_size(1);
+        scale_y = (bbox(4) - bbox(3) + 1) / img_size(2);
         % Notice: scale_x and scale_y may not be exactly the same but should be very close
         rvertices = reproject(vertices, M(:, :, cam+1)); % 3448 x 2
         rvertices = (rvertices - [bbox(1), bbox(3)]) ./ [scale_x, scale_y];

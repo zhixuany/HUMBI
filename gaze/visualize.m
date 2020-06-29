@@ -90,8 +90,8 @@ else
         % compute reprojections
         cam = bboxes(i, 1);
         bbox = bboxes(i, 2:end); % 1 x 4, [xmin, xmax, ymin, ymax]
-        scale_x = (bbox(2) - bbox(1) + 1) / img_size(1); % since cropped image width is 200
-        scale_y = (bbox(4) - bbox(3) + 1) / img_size(2); % since cropped image height is 250
+        scale_x = (bbox(2) - bbox(1) + 1) / img_size(1);
+        scale_y = (bbox(4) - bbox(3) + 1) / img_size(2);
         % Notice: scale_x and scale_y may not be exactly the same but should be very close
         rkps = reproject(kps, M(:, :, cam+1)); % 6 x 2
         rkps = (rkps - [bbox(1), bbox(3)]) ./ [scale_x, scale_y];
