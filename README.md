@@ -1,5 +1,5 @@
 # HUMBI
-This repository contains official code (in MATLAB) for exploring and visualizing HUMBI dataset introduced in the paper ["HUMBI: A Large Multiview Dataset of Human Body Expressions"](http://openaccess.thecvf.com/content_CVPR_2020/html/Yu_HUMBI_A_Large_Multiview_Dataset_of_Human_Body_Expressions_CVPR_2020_paper.html) (CVPR 2020).
+This repository contains official code (in MATLAB) for exploring and visualizing HUMBI dataset introduced in the paper ["HUMBI: A Large Multiview Dataset of Human Body Expressions"](http://openaccess.thecvf.com/content_CVPR_2020/html/Yu_HUMBI_A_Large_Multiview_Dataset_of_Human_Body_Expressions_CVPR_2020_paper.html) (CVPR 2020, [spotlight video](https://www.youtube.com/watch?v=bHc0CmXRUO4)).
 
 ## Overview
 HUMBI is a large multiview dataset for human body expressions with natural clothing, captured by 107 GoPro HD cameras from 772 distinctive subjects at 60Hz. During capture, each subject was invited into the capture stage and performing a series of tasks for each expression session (i.e. gaze, face, hand, body) sequentially, guided by an instructinal video (about 2.5 minutes).
